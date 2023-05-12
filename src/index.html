@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Rec a book</title>
+    <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="mui--text-white mui--text-display1 mui--align-vertical">Rec a book!</div>
+      <div class="mui--text-caption mui--text-white">by Angelina Polyakova</div>
+      
+    </div>
+    <div id="content" class="mui-container-fluid">
+      <div class="mui-row">
+        <div class="mui-col-sm-10 mui-col-sm-offset-1">
+          <br>
+          <br>
+          <div class="mui--text-black-54 mui--text-body2">Recommend a book</div>
+          <div class="mui-divider"></div>
+          <br>
+          <form class="mui-form" id="form">
+            <div class="mui-textfield">
+              <input id="author" type="text" placeholder="Author" required>
+            </div>
+            <div class="mui-textfield">
+              <input id="title" type="text" placeholder="Title" required>
+            </div>
+            <button id="submit" type="submit" class="mui-btn mui-btn--raised" disabled>Submit</button>
+          </form>
+          <button id="show" type="button" class="mui-btn mui-btn--raised">Show books</button>
+          <br>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
