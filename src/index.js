@@ -47,5 +47,7 @@ export function createModal(content) {
     mui.overlay('on', modal);
 }
 
+Book.fetch()
+
 
     

@@ -21,5 +21,7 @@ export class Book  {
             .then(response => {
                 return response.json()
             })
+            .then(response => console.log(response))
+            
     }
 }
