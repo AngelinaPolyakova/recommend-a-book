@@ -35,19 +35,31 @@ function handlerForm(event) {
     
 }
 
-showModal.addEventListener('click', createModal)
+showModal.addEventListener('click', function (event) {
+    event.preventDefault()
+
+    return fetch('https://rec-a-book-aa674-default-rtdb.firebaseio.com/books.json')
+            .then(response => {
+                return response.json()
+            })
+            .then(response => {
+                return response ? Object.keys(response).map( key=>({
+                    ...response[key]
+                })) : []
+            }) 
+            .then(response => createModal(Book.listOfBooks(response)))
+})
 
 export function createModal(content) {
     let modal = document.createElement('div')
     modal.classList.add('modal');
     modal.innerHTML = `
     <h1>Список книг</h1>
-    <div class='modal-content'>${Book.listOfBooks(content)}</div>
+    <div class='modal-content'>${content}</div>
     `
     mui.overlay('on', modal);
 }
 
-Book.fetch()
 
 
     

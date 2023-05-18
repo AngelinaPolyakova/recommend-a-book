@@ -16,12 +16,4 @@ export class Book  {
     static listOfBooks(books) {
         return books.length ? `<ol>${books.map(b => `<li>${b.title}, ${b.author}</li>`).join('')}</ol>` : `<p>Рекомендованных книг пока нет</p>`
     }
-    static fetch() {
-        return fetch('https://rec-a-book-aa674-default-rtdb.firebaseio.com/books.json')
-            .then(response => {
-                return response.json()
-            })
-            .then(response => console.log(response))
-            
     }
-}
